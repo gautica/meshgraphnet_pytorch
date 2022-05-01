@@ -1,0 +1,28 @@
+defaults:
+  - datamodule: flag_simple
+  - model: cloth
+
+entity: tum-fen
+project: meshgraphnet
+group: cloth
+
+seed: 197929817842754940073604391605349198190
+early_stopping: 7
+ckpt_dir: checkpoints
+pre_training: ~                 # Path/URL of pretrained model
+val_every_n_epoch: 1
+
+trainer:
+  _target_: pytorch_lightning.Trainer
+  gpus: 1
+  max_epochs: 100
+
+dataloader:
+  _target_: meshgraphnet.data.MeshDataModule
+  config: ${datamodule}
+
+task:
+  _target_: meshgraphnet.tasks.ClothSequenceRegression
+  config: ${model}
+  field: ${datamodule.field}
+

@@ -1,0 +1,2 @@
+from .CfdSequenceRegressionTask import CfdSequenceRegression
+from .ClothSeqenceRegressionTask import ClothSequenceRegression

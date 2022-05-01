@@ -1,0 +1,7 @@
+dataset_name: 'flag_simple'
+field: 'world_pos'
+history: True
+batch_size_train: 1
+batch_size_valid: 1
+
+data_dir: ~/data/flag_simple

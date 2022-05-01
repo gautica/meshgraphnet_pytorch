@@ -1,0 +1,20 @@
+name: cfd
+
+# network
+latent_size: 128
+num_layers: 2
+message_passing_steps: 15
+
+# input/output config
+node_feat_size: 2     # 2D velocity
+edge_feat_size: 3     # 2D coord +  length
+output_feat_size: 2   # 2D velocity
+
+# train parameter
+lr: 1e-3
+decayRate: 0.95
+accumulate_step_size: 4
+
+# data
+noise_scale: 0.02
+noise_gamma: 1.0

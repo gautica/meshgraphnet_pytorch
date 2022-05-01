@@ -1,0 +1,7 @@
+dataset_name: 'cylinder_flow'
+field: 'velocity'
+history: False
+batch_size_train: 1
+batch_size_valid: 1
+
+data_dir: ~/data/cylinder_flow

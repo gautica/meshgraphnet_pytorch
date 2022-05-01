@@ -1,0 +1,20 @@
+name: cloth
+
+# network
+latent_size: 128
+num_layers: 2
+message_passing_steps: 15
+
+# input/output config
+node_feat_size: 3     # 3D world pos
+edge_feat_size: 7     # 2D coord mesh pos + 3D coord world pos + 2 * length
+output_feat_size: 3   # 3D world pos
+
+# train parameter
+lr: 1e-3
+decayRate: 0.9
+accumulate_step_size: 5
+
+# data
+noise_scale: 0.003
+noise_gamma: 0.1
